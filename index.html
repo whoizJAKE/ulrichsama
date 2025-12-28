@@ -1,124 +1,157 @@
 <!DOCTYPE html>
-<html lang="fr"></html> 
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ulrich Yannick K. SAMA</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Invest Africa</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #fefefe;
+            box-sizing: border-box;
         }
-        header {
+        
+        body {
+            font-family: Arial, sans-serif;
             background-color: #ffffff;
-            color: #000000;
-            padding: 5px 0;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr 250px;
+            grid-template-rows: 1fr auto;
+            padding: 20px;
+            gap: 40px;
+        }
+        
+        .left-sidebar {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            padding: 5px 10px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 15px;
-            width: 100%;
-        }
-        nav {
-            width: 100%;
-            display: flex;
             justify-content: space-between;
-            padding: 0 5px;
-            max-width: 600px; /* Reduced from 1000px to make it more compact */
-            margin: 0 auto; /* Center the navigation */
         }
-        nav a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            font-size: 0.9em;
-            margin-right: 5px;
-        }
-        nav a:hover {
-            color: #333333;
-        }
-        section {
-            padding: 15px;
-        }
-        footer {
-            background-color: #ffffff;
-            color: #000000;
-            text-align: center;
-            padding: 5px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        h2 {
-            /*H2 est la présentation sur le homepage, soo small présentation/description*/
+        
+        .left-sidebar p {
             font-size: 1.2em;
-            width: 50%;
-            font-size: smaller;
-            font-family: 'italic' Arial, sans-serif;
-            color: #333333;
-        }   
-        h3 {
-            font-size: 5.5em;
-            font-family: 'italic' Arial, sans-serif;
-            font-size: larger;
-            color: #333333;
+            cursor: pointer;
         }
-        h4 {
-            font-size: 4.5em;
-            font-family: 'italic' Arial, sans-serif;
-            font-size: larger;
-            color: #333333;
+        
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        h5 {
+        
+        .center-content h1 {
             font-size: 3.5em;
-            font-family: 'italic' Arial, sans-serif;
-            font-size: larger;
-            color: #333333;
+            font-weight: bold;
+            margin-bottom: 60px;
         }
-        h6 {
-            font-size: 2.5em;
-            font-family: 'italic' Arial, sans-serif;
-            font-size: larger;
-            color: #333333;
+        
+        .boxes-container {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .box {
+            width: 180px;
+            height: 180px;
+            border: 2px solid #000;
+            background-color: rgb(169, 169, 169);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .box-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .box-content {
+            font-size: 0.7em;
+            font-weight: normal;
+            text-align: center;
+        }
+        
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        
+        footer p {
+            font-size: 0.8em;
+            color: #666;
+        }
+        
+        .right-sidebar {
+            border: 2px solid #000;
+            background-color:  rgb(169, 169, 169);
+            padding: 20px;
+        }
+        
+        .right-sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .right-sidebar p {
+            font-size: 0.9em;
+            line-height: 1.6;
         }
     </style>
-
 </head>
 <body>
-    <header>
-        <h1>Ulrich Yannick K. SAMA</h1>
-        <nav>
-            <a href="#about">Home</a>
-            <a href="#projects">Publications</a>
-            <a href="#contact">Recherches</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </nav>  
-    </header>
-    <section id = home>
-        <h2>Bonjour, mon nom est Ulrich Yannick Sama, etudiant a l'universitée de Sherbrooke, au Québec<h2>
-    </section>
-    </section>
-    <h3>Contact</h3>
-    <h4>Blog</h4>
-    <h5>Publications</h5>
-    <h6>Recherches</h6>
+    <div class="left-sidebar">
+        <p>team</p>
+        <p>Contact</p>
+    </div>
+    
+    <div class="center-content">
+        <h1>Invest Africa</h1>
+        
+        <div class="boxes-container">
+            <div class="box">
+                <div class="box-title">P1</div>
+                <div class="box-content">
+                    <!-- text/vid/image ici et plus bas-->
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-title">P2</div>
+                <div class="box-content">
+                    <!-- text/vid/img -->
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-title">P3</div>
+                <div class="box-content">
+                    <!-- contenu/text/vid -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="right-sidebar">
+        <h2>Infoletter</h2>
+        <p>Inscrivez-vous à notre infoletter pour recevoir les dernières nouvelles et opportunités d'investissement en Afrique.</p>
+    </div>
+    
     <footer>
-        <p style="font-size: 0.4em"> 2025 Jacob Hmaiddout et Ulrich Yannick Sama @ tout droits réservés</p>
+        <p>&copy; 2025 Jacob Hmaiddout et Ulrich Yannick Sama - Tous droits réservés</p>
     </footer>
-        <!-- fait par Jacob Hmaiddout pour et avec Ulrich Yannick K. SAMA le 23/09/2025 -->
-        <!--update et upload sur github cet index ci today 02/10/2025-->
-        <!--Upload ]a avec le reste des ref (publications, blog etc) le 10/10/2025-->
-        <!--Finalisation du site le 15/10/2025-->
+</body>
+</html>
